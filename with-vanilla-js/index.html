@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Getting started with Axios</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Getting started with Axios and Vanilla javascript</h1>
+        <h4>This application uses Axios.</h4>
+      </div>
+      <h2>Axios Demo by <small>LaEsporaDelHongo.com</small></h2>
+      <div class="panel panel-primary">
+        <div class="panel-heading">GET Request</div>
+        <div class="panel-body">
+          <button class="btn btn-primary" onclick="getRequest()">Get Posts</button>
+          <button class="btn btn-warning" onclick="cleanResult(this)">Clear</button>
+          <div class="panel-body" id="getResult"></div>
+        </div>
+      </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">GET Request with Parameters</div>
+        <div class="panel-body">
+          <input type="text" class="form-control" id="postId" placeholder="Post ID..." /><br>
+          <button class="btn btn-primary" onclick="getRequestWithParams()">Get Post</button>
+          <button class="btn btn-warning" onclick="cleanResult(this)">Clear</button>
+          <div class="panel-body" id="getResultWithParams"></div>
+        </div>
+      </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">POST Request</div>
+        <div class="panel-body">
+          <form class="form-inline" id="postInputForm">
+            <div class="form-group">
+              <input type="text" class="form-control" id="postTitle" placeholder="Post Title..." />
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form><br>
+          <button class="btn btn-warning" onclick="cleanResult(this)">Clear</button>
+          <div class="panel-body" id="postResult"></div>
+        </div>
+      </div>
+      <div class="fotter">
+        <p>&copy; <a href="http://laesporadelhongo.com" target="_blank">LaEsporaDelHongo.com</a></p>
+      </div>
+    </div>
+    <!-- Axios Library -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
